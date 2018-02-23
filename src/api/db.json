@@ -1,0 +1,58 @@
+{
+    "todos": [
+      {
+        "text": "Hacer cemento",
+        "completed":false,
+        "idWorker":3,
+        "id": 1
+      },
+      {
+        "text": "Instalacion electrica",
+        "completed":false,
+        "idWorker":1,
+        "id": 2
+      },
+      {
+        "text": "Toma de lecturas",
+        "completed":false,
+        "idWorker":4,
+        "id": 3
+      },
+      {
+        "text": "Levantar escombro",
+        "completed":false,
+        "idWorker":2,
+        "id": 4
+      },
+      {
+        "text": "Pintar",
+        "completed":false,
+        "idWorker":1,
+        "id": 5
+      },
+      {
+        "text": "Hacer RIM",
+        "completed":false,
+        "idWorker":1,
+        "id": 6
+      }
+    ],
+    "workers": [
+      {
+        "id":1,
+        "name": "elberth"
+      },
+      {
+        "id":2,
+        "name": "John"
+      },
+      {
+        "id":3,
+        "name": "Harry"
+      },
+      {
+        "id":4,
+        "name": "Jane"
+      }
+    ]
+  }
