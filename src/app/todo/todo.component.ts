@@ -33,6 +33,7 @@ export class TodoComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.textField.setValue(this.todo.text, {emitEvent: false});
     this.checkField.setValue(this.todo.completed, {emitEvent: false});
   }

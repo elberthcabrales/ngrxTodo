@@ -4,7 +4,7 @@ import * as TodoActions from './todo.actions';
 const initialState: Todo[] = [];
 
 export function TodoReducer(state: Todo[] = initialState, action: TodoActions.TodoActionType): Todo[]{
-  
+ 
   switch (action.type) {
     case TodoActions.LOAD_TODOS: {
       return [
@@ -12,7 +12,7 @@ export function TodoReducer(state: Todo[] = initialState, action: TodoActions.To
       ];
     }
     case TodoActions.LOAD_TODOS_SUCCESS: {
-      return [...state,...action.todos];
+      return [...action.payload];
     }
     case TodoActions.ADD_TODO: {
       return [

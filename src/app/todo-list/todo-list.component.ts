@@ -7,13 +7,12 @@ import { AppState } from './../../redux/app.reducer';
 import { Todo } from './../../redux/todo/todo.model';
 import { getVisibleTodos } from './../../redux/todo/todo.selectors';
 import * as FilterActions from './../../redux/filter/filter.actions';
-import {TodoService} from './../todo.service';
+import * as TodoActions from './../../redux/todo/todo.actions';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
-  providers:[TodoService]
 })
 export class TodoListComponent implements OnInit {
 
@@ -23,8 +22,7 @@ export class TodoListComponent implements OnInit {
 
   constructor(
     private store: Store<AppState>,
-    private route: ActivatedRoute,
-    private todoService: TodoService
+    private route: ActivatedRoute
   ) {
     this.route.params
     .subscribe(params => {
@@ -34,10 +32,10 @@ export class TodoListComponent implements OnInit {
 
   ngOnInit() {
     this.todos$ = this.store.select(getVisibleTodos);
-    this.todoService.loadBlogs().subscribe((todos)=>{
+   
+    /*this.todoService.loadBlogs().subscribe((todos)=>{
       console.log(todos)
-    })
-
+    })*/
   }
 
   private setFilter(filter: string){

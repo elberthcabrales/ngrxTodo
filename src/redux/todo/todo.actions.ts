@@ -14,7 +14,7 @@ export class LoadTodosAction implements Action {
 export class LoadTodosSuccessAction implements Action {
   readonly type = LOAD_TODOS_SUCCESS;
 
-  constructor(public todos: Todo[]) {}
+  constructor(public payload: Todo[]) {}
 }
 
 export class AddTodoAction implements Action {
@@ -54,7 +54,9 @@ export class UpdateTodoAction implements Action {
 }
 
 
-export type TodoActionType = LoadTodosAction| LoadTodosSuccessAction |
+export type TodoActionType = 
+LoadTodosAction| 
+LoadTodosSuccessAction |
 AddTodoAction | 
 DeleteTodoAction |
 ToggleTodoAction |

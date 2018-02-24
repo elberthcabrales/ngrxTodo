@@ -1,0 +1,8 @@
+
+  <!-- The second value will be selected initially -->
+<select name="text"> <!--Supplement an id here instead of using 'text'-->
+  <option *ngFor="let worker of (workers$|async)" value="worker.id">
+    {{worker.name}}
+  </option> 
+</select>
+<hr>
