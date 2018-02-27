@@ -50,7 +50,7 @@ export class TodoListComponent implements OnInit {
         this.store.dispatch(action);
         break;
       }
-      default: {
+      case 'all': {
         const action = new FilterActions.SetFilterAction('SHOW_ALL');
         this.store.dispatch(action);
         break;

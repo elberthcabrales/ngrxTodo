@@ -9,6 +9,9 @@ export const getCountItemLeft = createSelector(getTodos, todos => {
 });
 
 export const getVisibleTodos = createSelector(getState, state => {
+  if (!Number.isNaN(Number(state.filtro))) {
+       return state.todos.filter(t=> t.idWorker==state.filtro);
+  }
   switch (state.filtro) {
     case 'SHOW_ALL': {
       return state.todos;
@@ -19,5 +22,6 @@ export const getVisibleTodos = createSelector(getState, state => {
     case 'SHOW_ACTIVE': {
       return state.todos.filter(t => !t.completed);
     }
+    
   }
 });
