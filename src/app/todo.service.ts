@@ -11,7 +11,7 @@ export class TodoService {
   private _baseUrl = 'http://localhost:3000/';
   constructor(private http: Http) { }
 
-  loadBlogs(): Observable<Todo[]> {
+  loadTodos(): Observable<Todo[]> {
     return this.http.get(this._baseUrl + 'todos').map(res => res.json());
   }
 

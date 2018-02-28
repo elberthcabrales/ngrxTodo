@@ -16,5 +16,5 @@ export class LoadWorkersSuccessAction implements Action {
 
 
 export type WorkerActionType = 
-LoadWorkersAction| 
+LoadWorkersAction | 
 LoadWorkersSuccessAction;

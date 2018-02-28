@@ -24,7 +24,7 @@ export class TodoEffects{
     loadAll: Observable<Action> = this.actions$
     .ofType<TodoActions.LoadTodosAction>(TodoActions.LOAD_TODOS)
     .mergeMap(action => 
-        this.todoService.loadBlogs().map((todos:Todo[])=>{
+        this.todoService.loadTodos().map((todos:Todo[])=>{
             console.log(todos);
             return new TodoActions.LoadTodosSuccessAction(todos);
         }));

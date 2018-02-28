@@ -17,4 +17,4 @@ export class findByWorkerAction implements Action{
 }
 
 export type FilterActionType = 
-SetFilterAction| findByWorkerAction;
+SetFilterAction | findByWorkerAction;
