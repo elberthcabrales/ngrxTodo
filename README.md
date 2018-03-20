@@ -1,3 +1,10 @@
+
+#INSTALL json-server
+npm install -g json-server  
+#exec
+json-server --watch db.json
+
+
 # TodoAppNgrx
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
